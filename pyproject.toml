@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bin_packer"
+version = "0.0.1"
+authors = [
+  { name="Vijay Singh Kushwaha", email="vijaysinghkushwaha3737@gmail.com" },
+]
+description = "3D Bin Packing Library, Useful for Container Loading Problem (CLP)"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/h3110Fr13nd/3d_bin_packing"
+Issues = "https://github.com/h3110Fr13nd/3d_bin_packing/issues"
