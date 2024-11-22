@@ -28,6 +28,7 @@ packer.add_bin(bin1)
 packer.add_item(item1)
 packer.pack()
 ```
+
 Checking the Results
 You can check the packed items and unfit items using the bins and unfit_items properties of the Packer class:
 
