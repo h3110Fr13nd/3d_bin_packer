@@ -82,3 +82,6 @@ python -m unittest discover tests
 ```
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+Credits: This is just a Python Implementation of the code from npm package https://www.npmjs.com/package/@owens3364/3d-bin-packing.
