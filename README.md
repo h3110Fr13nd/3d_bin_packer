@@ -7,7 +7,7 @@ This library provides a simple implementation of the 3D Bin Packing problem, whi
 To install the library, you can use pip:
 
 ```sh
-pip install 3d_bin_packer
+pip install 3d-bin-packer
 ```
 ## Usage
 Importing the Library
