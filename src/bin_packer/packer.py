@@ -100,7 +100,7 @@ class Packer:
             fitted = False
             
             # Try different axes for positioning
-            for axis in [Axis.width, Axis.height, Axis.depth]:
+            for axis in [ Axis.height, Axis.width, Axis.depth, ]:
                 if fitted:
                     break
                     
@@ -111,17 +111,17 @@ class Packer:
                             item_b.position[1],
                             item_b.position[2]
                         ]
-                    elif axis == Axis.height:
-                        item_position = [
-                            item_b.position[0],
-                            item_b.position[1] + item_b.dimension[1],
-                            item_b.position[2]
-                        ]
-                    else:  # Axis.depth
+                    elif axis == Axis.depth:  # Axis.depth
                         item_position = [
                             item_b.position[0],
                             item_b.position[1],
                             item_b.position[2] + item_b.dimension[2]
+                        ]
+                    else:
+                        item_position = [
+                            item_b.position[0],
+                            item_b.position[1] + item_b.dimension[1],
+                            item_b.position[2]
                         ]
 
                     if bin_.put_item(item, item_position):

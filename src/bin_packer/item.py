@@ -55,18 +55,20 @@ def rect_intersect(item1: 'Item', item2: 'Item', x: Axis, y: Axis) -> bool:
     return ix < (d1[x] + d2[x]) / 2 and iy < (d1[y] + d2[y]) / 2
 
 class Item(Box):
-    def __init__(self, name: str, w: float, h: float, d: float):
+    def __init__(self, name: str, w: float, h: float, d: float, allowed_rotations: List[RotationType] = None, color: str = '#000000'):
         """
-        Initialize an Item with name and dimensions.
+        Initialize an Item with name, dimensions, allowed rotations, and color.
         
         Args:
             name (str): Name of the item
             w (float): Width of the item
             h (float): Height of the item
             d (float): Depth of the item
+            allowed_rotations (List[RotationType], optional): List of allowed rotations. Defaults to all rotations.
+            color (str, optional): Color of the item. Defaults to '#000000'.
         """
         super().__init__(name, w, h, d)
-        self._allowed_rotations = [
+        self._allowed_rotations = allowed_rotations if allowed_rotations is not None else [
             RotationType.whd,
             RotationType.hwd,
             RotationType.hdw,
@@ -74,8 +76,9 @@ class Item(Box):
             RotationType.dwh,
             RotationType.wdh,
         ]
-        self._rotation_type = RotationType.whd
+        self._rotation_type = self._allowed_rotations[0]
         self._position: List[float] = []  # x, y, z
+        self.color = color # Color of the item
 
     @property
     def allowed_rotations(self) -> List[RotationType]:
