@@ -100,10 +100,9 @@ class Packer:
             fitted = False
             
             # Try different axes for positioning
-            for axis in [ Axis.height, Axis.depth, Axis.width]:
+            for axis in [Axis.width, Axis.height, Axis.depth]:
                 if fitted:
                     break
-                    
                 for item_b in bin_.items:
                     if axis == Axis.width:
                         item_position = [

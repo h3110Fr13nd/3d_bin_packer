@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "3d_bin_packer"
-version = "0.0.4"
+version = "0.0.5"
 authors = [
   { name="Vijay Singh Kushwaha", email="vijaysinghkushwaha3737@gmail.com" },
 ]
