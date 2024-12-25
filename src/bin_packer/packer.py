@@ -100,7 +100,7 @@ class Packer:
             fitted = False
             
             # Try different axes for positioning
-            for axis in [ Axis.height, Axis.width, Axis.depth, ]:
+            for axis in [ Axis.height, Axis.depth, Axis.width]:
                 if fitted:
                     break
                     
